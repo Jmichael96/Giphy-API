@@ -10,32 +10,49 @@
     <title>my animal-gifs</title>
 </head>
 <body>
+
+
 <div class="container">
     <div class="container">
         <div class="row justify-content-center">
             <h1 id="head">Animal Gifs!</h1>
         </div>
     </div>
+<section>
     <div class="container">
         <div class="row justify-content-center">
-            <div class="m-2" id="animal-buttons"></div>
+            <div id="animal-buttons"></div>
         </div>
     </div>
     <form class="container" id="animal-form">
     <div class="row justify-content-center">
         <input class="text-center" type="text" id="animal-input" placeholder="Create a New Animal!">
-        <input id="add-animal" class="btn btn-primary" type="submit" value="Add an Animal">
+        <input id="add-animal" class="btn" type="submit" value="Add an Animal">
+        <input id="remove-animal" class="btn" type="submit" value="Remove Previous Animals">
     </div>
     </form>
 
-    <div class="container">
+<div class="container">
     <div class="row justify-content-center">
         <div class="col-9">
             <div id="animal-gifs"></div>
         </div>
     </div>
+        
+    </div>
+    </section>
     </div>
 </div>
+<footer class="container">
+        <div class="fixed-bottom">
+            <img class="m-3" src="./assets/images/giphy-awesome.gif" alt="giphy-awesome"/>
+        </div>
+
+
+        <div id="copy" class="fixed-bottom text-center">Copyright &copy;</div>
+
+</footer>
+
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
 <script type="text/javascript" src="./assets/javascript/app.js"></script>

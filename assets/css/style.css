@@ -1,5 +1,5 @@
 body{
-    background: url("../images/closejack.JPG");
+    background: url("../images/smoothblack.jpg");
     background-size: cover;
 }
 .gif-img{
@@ -14,9 +14,45 @@ body{
 }
 /* animal gifs caption */
 #head{
-    font-size: 70px;
+    font-size: 85px;
+    color:black;
+    text-shadow: rgb(0, 0, 0) -3px 1px 10px;
 }
-#animal-buttons{
+.ratings{
+    color:white;
+    text-shadow:rgb(0, 0, 0) -2px 2px 2px;
+}
+
+.downloading{
+    background-color: rgb(54, 92, 196);
+    color: white;
+    text-shadow:rgb(0, 0, 0) -2px 2px 2px;
+    font-size: 5px;
+}
+.animal-btn{
+    background-color: rgb(110, 137, 255);
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    color:white;
+    text-shadow:rgb(0, 0, 0) -2px 2px 2px;
 
 }
+#add-animal{
+    font-weight: bold;
+    color:black;
+    text-shadow:rgb(0, 0, 0) 1px 2px 9px;
+    margin: 5px;
+    background-color: rgb(255, 255, 255);
+}
+#remove-animal{
+    font-weight: bold;
+    color:black;
+    text-shadow:rgb(0, 0, 0) 1px 2px 9px;
+    margin: 5px;
+    background-color: rgb(255, 255, 255);
 
+}
+#copy{
+    color:white;
+}
