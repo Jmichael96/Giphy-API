@@ -1,0 +1,22 @@
+body{
+    background: url("../images/closejack.JPG");
+    background-size: cover;
+}
+.gif-img{
+    height:150px;
+    width:150px;
+}
+.animalDiv{
+    float:left;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+}
+/* animal gifs caption */
+#head{
+    font-size: 70px;
+}
+#animal-buttons{
+
+}
+
