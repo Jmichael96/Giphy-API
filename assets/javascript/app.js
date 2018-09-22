@@ -7,8 +7,7 @@ var topics = ["bear", "bat", "llama", "goat", "tiger", "fish", "wolf", "cat", "s
 $("#add-animal").on("click", function(event) {
 event.preventDefault();
    var newAnimal = $("#animal-input").val().trim();
-  newAnimal.addClass("new-animal");
-  
+
   if(newAnimal){
     topics.push(newAnimal);
     renderButtons();
