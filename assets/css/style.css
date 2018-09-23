@@ -1,55 +1,64 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    color: white;
+}
 body{
-    background: url("../images/smoothblack.jpg");
+    background-image: url("../images/giphy.gif"),
+    linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+    background-blend-mode: inherit;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    position:fixed;
-    top: 0;
-    margin: 0;
-    width: 100%;
-    height: 100%;
+    background-position: center;
 }
-img{
-    margin: 2px;
-    height: 150px;
-    width: 175px;
-}
+/* the actualy gif image itself */
 .gif-img{
-    height:150px;
-    width:150px;
+    border-radius: 3px;
+    height: 150px;
+    width: 150px;
 }
+/* where all gifs are displayed from */
 .animalDiv{
-    float:left;
+    display: inline-block;
     margin-left: auto;
     margin-right: auto;
-    padding: 5px;
+    padding: 36px;
 }
 /* animal gifs caption */
 #head{
     font-size: 85px;
-    color:black;
+    color:white;
     text-shadow: rgb(0, 0, 0) -3px 1px 10px;
 }
+/* rating text for all gifs */
 .ratings{
     color:white;
     text-shadow:rgb(0, 0, 0) -2px 2px 2px;
 }
-
-.downloading{
-    background-color: rgb(54, 92, 196);
-    color: white;
-    text-shadow:rgb(0, 0, 0) -2px 2px 2px;
-    font-size: 5px;
-}
+/* animal button style on top of page */
 .animal-btn{
-    background-color: rgb(110, 137, 255);
+    background-color: rgba(78, 3, 3, 0.842);
     border-radius: 5px;
+    border-color: rgba(53, 53, 53, 0.527);
     padding: 5px;
     margin: 3px;
     color:white;
     text-shadow:rgb(0, 0, 0) -2px 2px 2px;
-
 }
+.animal-btn:hover{
+    border-color: white;
+}
+.animal-btn:focus{
+    color:rgb(78, 3, 3, 0.842);
+    background-color: white;
+    font-weight: bold;
+    text-shadow:rgb(0, 0, 0) -1px 1px 1px;
+}
+/* end of animal button style
+-----------------------------
+add animal button */
 #add-animal{
     font-weight: bold;
     color:black;
@@ -57,14 +66,38 @@ img{
     margin: 5px;
     background-color: rgb(255, 255, 255);
 }
+#add-animal:hover{
+    background-color: rgb(78, 3, 3, 0.842);
+    color:rgb(255, 255, 255);
+}
+/* end of add animal button
+---------------------------
+remove previous animal button */
 #remove-animal{
     font-weight: bold;
-    color:black;
+    color:white;
     text-shadow:rgb(0, 0, 0) 1px 2px 9px;
     margin: 5px;
-    background-color: rgb(255, 255, 255);
-
+    background-color: rgba(78, 3, 3, 0.842);
 }
+#remove-animal:hover{
+    background-color: rgb(255, 255, 255);
+    color:rgba(78, 3, 3);
+}
+/* end of remove animal button
+------------------------------
+animal input box */
+#animal-input{
+    border-radius: 5px;
+    border-color:rgb(78, 3, 3, 0.842);
+    color:rgb(78, 3, 3, 0.842);
+}
+#animal-input:focus{
+    border-color: white;
+    background-color: rgb(78, 3, 3, 0.842);
+    color:white;
+}
+/* the footer */
 #copy{
     color:white;
 }

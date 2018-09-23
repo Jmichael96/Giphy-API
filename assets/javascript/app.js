@@ -17,7 +17,7 @@ event.preventDefault();
   $("#animal-input").val("");
 
 });
-//removing last button
+//removing all user added buttons from the page
 function removeLastButton(){
   $("remove-animal").on("click", function(){
   topics.pop(action);
@@ -26,22 +26,29 @@ function removeLastButton(){
   });
 }
 
-$(document).on("click", ".animal-btn", function(){
-  var animalName = $(this).attr("data-name");
-  animalsDisplayed(animalName);
-  console.log("click", animalName);
-})
+// click function when animal button is clicked gifs render to page
+$(function(){
+  $(document).on("click", ".animal-btn", function(){
+    var animalName = $(this).attr("data-name");
+    animalsDisplayed(animalName);
+  
+    console.log("click", animalName);
+  });
+});
 
-//appending all animal names, images, ratings to the page
+
+//giphy API and appending all animal names, images, ratings to the page
 function animalsDisplayed(animalName) {
   var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + animalName + "&api_key=QcDB96pD9RRsGoPu39YeDzqG8nH5za6V&limit=10";
-
+  
   $.ajax({
     url: queryURL,
     method:"GET"
-    }).done(function(animalGIF) {
+    
+    })
+    .then(function(animalGIF) {
 
-          console.log(queryURL);
+          // console.log(queryURL);
           console.log(animalGIF);
 
     $("#animal-gifs").empty();
@@ -71,7 +78,7 @@ function animalsDisplayed(animalName) {
 
 
 
-//creating buttons for all the animals
+//creating buttons for all default animals and redering to page
 function renderButtons(){
 
     $("#animal-buttons").empty();
@@ -81,7 +88,7 @@ function renderButtons(){
        var animalButton = $("<button>");
       
        animalButton.addClass("animal-action")
-       animalButton.addClass("animal-btn btn-primary");
+       animalButton.addClass("animal-btn");
        animalButton.attr("data-name", topics[i]);
        animalButton.text(topics[i]);
 
@@ -92,10 +99,8 @@ function renderButtons(){
 }
 
 
-//making the images turn to gifs or stop them
+//making the images turn to gifs or on click again, stop.
 renderButtons();
-$(document).on("click", ".animal-action", animalsDisplayed);
-
 $(document).on("click", ".gif-img", function() {
     var state = $(this).attr("data-state");
     if (state === "still"){
