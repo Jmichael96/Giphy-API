@@ -11,7 +11,7 @@ event.preventDefault();
   if(newAnimal){
     topics.push(newAnimal);
     renderButtons();
-  }
+  };
 
 
   $("#animal-input").val("");
@@ -24,7 +24,7 @@ function removeLastButton(){
   renderButtons();
   return false;
   });
-}
+};
 
 // click function when animal button is clicked gifs render to page
 $(function(){
@@ -56,7 +56,7 @@ function animalsDisplayed(animalName) {
     for (var i = 0; i < animalGIF.data.length; i++){
 
       var animalDiv = $("<div>");
-      animalDiv.addClass("animalDiv")
+      animalDiv.addClass("animalDiv");
 
       var p = $("<p class='text-center'>");
       p.addClass("ratings");
@@ -87,7 +87,7 @@ function renderButtons(){
 
        var animalButton = $("<button>");
       
-       animalButton.addClass("animal-action")
+       animalButton.addClass("animal-action");
        animalButton.addClass("animal-btn");
        animalButton.attr("data-name", topics[i]);
        animalButton.text(topics[i]);
@@ -95,8 +95,8 @@ function renderButtons(){
        $("#animal-buttons").append(animalButton);
     
       
-    }
-}
+    };
+};
 
 
 //making the images turn to gifs or on click again, stop.
@@ -109,6 +109,6 @@ $(document).on("click", ".gif-img", function() {
     } else{
       $(this).attr("src", $(this).data("still"));
       $(this).attr("data-state", "still");
-    }
+    };
 });
 
