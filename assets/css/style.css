@@ -5,9 +5,7 @@ html, body {
     color: white;
 }
 body{
-    background-image: url("../images/giphy.gif"),
-    linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
-    background-blend-mode: inherit;
+    background-image: url("../images/lighterlakebg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -39,7 +37,7 @@ body{
 }
 /* animal button style on top of page */
 .animal-btn{
-    background-color: rgba(78, 3, 3, 0.842);
+    background-color: rgba(17, 97, 202, 0.842);
     border-radius: 5px;
     border-color: rgba(53, 53, 53, 0.527);
     padding: 5px;
@@ -61,13 +59,13 @@ body{
 add animal button */
 #add-animal{
     font-weight: bold;
-    color:black;
+    color:white;
     text-shadow:rgb(0, 0, 0) 1px 2px 9px;
     margin: 5px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(17, 97, 202, 0.842);
 }
 #add-animal:hover{
-    background-color: rgb(78, 3, 3, 0.842);
+    background-color: rgb(255, 255, 255, .5);
     color:rgb(255, 255, 255);
 }
 /* end of add animal button
@@ -75,14 +73,14 @@ add animal button */
 remove previous animal button */
 #remove-animal{
     font-weight: bold;
-    color:white;
+    color:rgb(255, 255, 255);
     text-shadow:rgb(0, 0, 0) 1px 2px 9px;
     margin: 5px;
-    background-color: rgba(78, 3, 3, 0.842);
+    background-color: rgba(145, 5, 5, 0.842);
 }
 #remove-animal:hover{
-    background-color: rgb(255, 255, 255);
-    color:rgba(78, 3, 3);
+    background-color: rgb(255, 255, 255, .5);
+    color:rgb(255, 255, 255);
 }
 /* end of remove animal button
 ------------------------------
@@ -94,7 +92,7 @@ animal input box */
 }
 #animal-input:focus{
     border-color: white;
-    background-color: rgb(78, 3, 3, 0.842);
+    background-color: rgba(17, 97, 202, 0.842);
     color:white;
 }
 /* the footer */
