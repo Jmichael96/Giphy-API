@@ -29,11 +29,12 @@ body{
     font-size: 85px;
     color:white;
     text-shadow: rgb(0, 0, 0) -3px 1px 10px;
-}
+    font-family: 'Graduate', cursive;}
 /* rating text for all gifs */
 .ratings{
     color:white;
     text-shadow:rgb(0, 0, 0) -2px 2px 2px;
+    font-family: 'Alike Angular', serif;
 }
 /* animal button style on top of page */
 .animal-btn{
@@ -44,6 +45,8 @@ body{
     margin: 3px;
     color:white;
     text-shadow:rgb(0, 0, 0) -2px 2px 2px;
+    font-family: 'Alike Angular', serif;
+    font-size: 19px;
 }
 .animal-btn:hover{
     border-color: white;
@@ -63,6 +66,8 @@ add animal button */
     text-shadow:rgb(0, 0, 0) 1px 2px 9px;
     margin: 5px;
     background-color: rgba(17, 97, 202, 0.842);
+    font-family: 'Graduate', cursive;
+    font-size: 20px;
 }
 #add-animal:hover{
     background-color: rgb(255, 255, 255, .5);
@@ -77,6 +82,8 @@ remove previous animal button */
     text-shadow:rgb(0, 0, 0) 1px 2px 9px;
     margin: 5px;
     background-color: rgba(145, 5, 5, 0.842);
+    font-family: 'Graduate', cursive;
+    font-size: 20px;
 }
 #remove-animal:hover{
     background-color: rgb(255, 255, 255, .5);
@@ -89,6 +96,7 @@ animal input box */
     border-radius: 5px;
     border-color:rgb(78, 3, 3, 0.842);
     color:rgb(78, 3, 3, 0.842);
+    font-family: 'Alike Angular', serif;
 }
 #animal-input:focus{
     border-color: white;
