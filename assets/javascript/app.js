@@ -7,16 +7,15 @@ var topics = ["bear", "bat", "llama", "goat", "tiger", "fish", "wolf", "cat", "s
 $("#add-animal").on("click", function(event) {
 event.preventDefault();
    var newAnimal = $("#animal-input").val().trim();
-
+//pushes new animals to the array and adds it to page
   if(newAnimal){
     topics.push(newAnimal);
     renderButtons();
   };
-
-
+//an empty value to catch the animal input that was created
   $("#animal-input").val("");
-
 });
+
 //removing all user added buttons from the page
 function removeLastButton(){
   $("remove-animal").on("click", function(){
@@ -52,17 +51,18 @@ function animalsDisplayed(animalName) {
           console.log(animalGIF);
 
     $("#animal-gifs").empty();
-          
+   //for loop to make sure only 10 gifs display
     for (var i = 0; i < animalGIF.data.length; i++){
-
+   //creating the elements for the page
       var animalDiv = $("<div>");
       animalDiv.addClass("animalDiv");
-
+      //displaying ratings 
       var p = $("<p class='text-center'>");
       p.addClass("ratings");
+       
       var gifImg = $("<img>");
       gifImg.addClass("gif-img");
-
+   // displaying specific data from the gif
       gifImg.attr("data-state", "still");
       gifImg.attr("data-still", animalGIF.data[i].images.fixed_height_small_still.url);
       gifImg.attr("data-animate", animalGIF.data[i].images.fixed_height_small.url);    
@@ -72,9 +72,9 @@ function animalsDisplayed(animalName) {
       animalDiv.append(gifImg);          
       animalDiv.append(p);
       $("#animal-gifs").prepend(animalDiv);  
-    }
+    };
   });
-}
+};
 
 
 
@@ -82,9 +82,9 @@ function animalsDisplayed(animalName) {
 function renderButtons(){
 
     $("#animal-buttons").empty();
-
+   //for loop to iterate through the array
     for (var i = 0; i < topics.length; i++){
-
+      //creating buttons for the animals array
        var animalButton = $("<button>");
       
        animalButton.addClass("animal-action");
@@ -92,12 +92,9 @@ function renderButtons(){
        animalButton.attr("data-name", topics[i]);
        animalButton.text(topics[i]);
 
-       $("#animal-buttons").append(animalButton);
-    
-      
+       $("#animal-buttons").append(animalButton); 
     };
 };
-
 
 //making the images turn to gifs or on click again, stop.
 renderButtons();
