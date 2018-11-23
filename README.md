@@ -1,5 +1,5 @@
 # Giphy-API
-![HERE](https://media.giphy.com/media/M1DaLGxFGS6o8/giphy.gif)
+![HERE](https://media.giphy.com/media/M1DaLGxFGS6o8/giphy.gif) ![HERE](https://media.giphy.com/media/13ByqbM0hgfN7y/giphy.gif)
 
 ## Click https://jmichael96.github.io/Giphy-API/ to play with the gifs!
 
