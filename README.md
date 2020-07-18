@@ -1,10 +1,8 @@
 # Giphy-API
-## Click https://jmichael96.github.io/Giphy-API/ to play with the gifs!
+## [Live Link](https://jmichael96.github.io/Giphy-API/)
 
 #### Desktop/Laptop View
 ![Screenshot_2020-07-18 Animal-Gifs](https://user-images.githubusercontent.com/40511023/87862168-c2062b80-c912-11ea-8e34-2678a67f3ec6.jpg)
-
-
 
 ## HOW IT WORKS
   Using Ajax requests thorugh [giphy](https://giphy.com/) to render animal gifs to the user.
