@@ -1,57 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <!-- css link -->
-    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
-    <!-- bootstrap css cdn -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <!-- jquery cdn -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Animal-Gifs</title>
+
+    <!-- css link -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <!-- bootstrap css cdn -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <!-- google font link -->
     <link href="https://fonts.googleapis.com/css?family=Alike+Angular|Graduate" rel="stylesheet">
-    <title>My Animal-Gifs</title>
+
+
 </head>
+
 <body>
-<!-- title of animal gifs! -->
-<div class="container">
-    <div class="row justify-content-center">
-        <h1 id="head">Animal Gifs!</h1>
-    </div>
-</div>
-<!-- where all animal buttons are displayed at the top of the page -->
-<section>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div id="animal-buttons"></div>
-        </div>
-    </div>
-<!-- form of the imput box for additional animal buttons and submit buttons -->
-    <form class="container" id="animal-form">
-        <div class="row justify-content-center">
-            <input class="text-center" type="text" id="animal-input" placeholder="Create a New Animal!">
-            <input id="add-animal" class="btn" type="submit" value="Add an Animal">
-            <input id="remove-animal" class="btn" type="submit" value="Remove Previous Animals">
-        </div>
-    </form>
-<!-- where animal gifs are displayed from -->
-    <div class="container">
-        <div class="justify-content-center">
-            <div id="animal-gifs"></div>
-        </div>
-    </div>
-</section>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-<footer>
-    <div id="copy" class="fixed-bottom text-center">Copyright &copy;</div>
-</footer>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
 
-<!-- bootstrap javascript cdn -->
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-<!-- javascript link -->
-<script type="text/javascript" src="./assets/javascript/app.js"></script>
+                <li class="nav-item">
+                    <form id="inputForm" class="my-2 my-lg-0">
+                        <input type="text" id="animal-input" placeholder="Create an animal" />
+                        <button id="add-animal" type="submit">SUBMIT</button>
+                    </form>
+                </li>
+            </ul>
+            <div id="directionWrap">
+                <button id="directionsBtn" class="nav-btn" type="button" data-toggle="modal"
+                    data-target="#exampleModal">DIRECTIONS</button>
+            </div>
+        </div>
+    </nav>
+    <!-- page title -->
+    <div id="titleWrap">
+        <h1>ANIMAL GIFS</h1>
+    </div>
+
+    <article class="container">
+        <!-- where the default buttons render -->
+        <div id="default-buttons" class="row justify-content-center"></div>
+        <!-- where the added buttons render -->
+        <div id="added-buttons" class="row justify-content-center"></div>
+    </article>
+
+    <article class="container">
+        <!-- where animal gifs are displayed -->
+        <div id="animal-gifs" class="row justify-content-center"></div>
+    </article>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">DIRECTIONS</h5>
+
+                    <span class="close" id="closeModalX" data-dismiss="modal" aria-label="Close">&times;</span>
+
+                </div>
+                <div class="modal-body">
+                    <ul>
+                        <li>Click on a button to view gifs</li>
+                        <li>Click on a gif to play/stop it</li>
+                        <li>Use the input field to add new gifs and view them</li>
+                        <li>If you wish to remove a button you have added, simply right click it</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button id="closeModalBtn" type="button" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div id="copy" class="fixed-bottom text-center">&copy; 2018</div>
+    </footer>
+
+
+    <!-- jquery cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- bootstrap javascript cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script><!-- javascript link -->
+    <script type="text/javascript" src="./assets/javascript/app.js"></script>
+
 
 </body>
+
 </html>
